@@ -9,6 +9,7 @@
     white-space: nowrap;
     gap:64px;
     font-family: 'CormorantSc', serif;
+    font-size: 30px;
 }
 .nav-links a {
     text-decoration: none;
@@ -78,7 +79,7 @@ nav {
     color: #885F43;
     text-shadow: 2px 2px 4px rgba(82, 82, 82, 0.5);
     margin: 10px;
-    margin-left: 30px;
+    margin-left:60px;
 }
 #home h2 {
     position: relative;
@@ -86,6 +87,6 @@ nav {
     color: #C8B3A0;
     text-shadow: 2px 2px 4px rgba(88, 87, 87, 0.5);
     margin: 10px;
-    margin-left:  40px;
+    margin-left:80px;
 
 }
