@@ -3,7 +3,7 @@
     src: url(fonts/CormorantSC-Regular.ttf);
 }
 
-nav-links{
+.nav-links{
     display:flex;
     justify-content:center;
     white-space: nowrap;
