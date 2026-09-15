@@ -1,8 +1,14 @@
+@font-face {
+    font-family: 'Cormorant Sc';
+    src: url(fonts/CormorantSC-Regular.ttf);
+}
+
 nav-links{
     display:flex;
     justify-content:center;
     white-space: nowrap;
-    gap: 64px;
+    gap:64px;
+    font-family: 'Cormorant Sc', serif;
 }
 
 
