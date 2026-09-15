@@ -72,11 +72,17 @@ nav {
     z-index: 0;
 }
 
-#home h1,
+#home h1{
+    position: relative;
+    z-index: 4;
+    color: #885F43;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+}
 #home h2 {
     position: relative;
-    z-index: 5;
-    color: white;
+    z-index: 3;
+    color: #C8B3A0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin: 10px;
 }
