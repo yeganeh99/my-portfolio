@@ -10,6 +10,19 @@
     gap:64px;
     font-family: 'CormorantSc', serif;
 }
+.nav-links a {
+    text-decoration: none;
+    display:inline-block;
+    padding: 8px 16px;
+    border: 1px solid rgb(155, 155, 155);
+    border-radius: 10px;
+    color: Navy;
+}
+
+.nav-links a:hover {
+    color: rgb(92, 239, 239);
+    border-color: #3075c5;
+}
 
 
 * {
