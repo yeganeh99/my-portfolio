@@ -24,7 +24,7 @@
     color: rgb(188, 99, 15);
     border-color: #654e1b;
     box-shadow: 0px 0px 20px rgba(126, 66, 10, 0.5);
-    background-color:#C8B3A0
+    background-color:#dbc2ad
 }
 
 
@@ -43,8 +43,8 @@
 
 .blob-img {
 display:block;
-  width: 320px;               
-  height: 320px;             
+  width: 280px;               
+  height: 280px;             
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   overflow: hidden;           
   border: 2px solid #885F43;   
@@ -59,8 +59,8 @@ display:block;
 }
 
 body {
-    background-color: lab(90.57% -2.59 7.3);
-    color: rgb(133, 104, 45);
+    background-color: lab(90.42% 3.41 21.4);
+    color: rgb(54, 31, 7);
     margin: 0;
     padding: 0;
 }
@@ -79,16 +79,15 @@ nav {
 
 #home h1{
 
-    color: #885F43;
-    text-shadow: 2px 2px 4px rgba(82, 82, 82, 0.5);
+    color: #4b2407;
+    text-shadow: 2px 2px 4px rgba(75, 46, 13, 0.5);
     margin: 10px;
     margin-left:60px;
 }
 #home h2 {
     
-    color: #C8B3A0;
-    text-shadow: 2px 2px 4px rgba(88, 87, 87, 0.5);
+    color: #4b2407;
+    text-shadow: 2px 2px 4px rgba(75, 46, 13, 0.5);
     margin: 10px;
-    margin-left:80px;
-
+    margin-left: 40px;
 }
