@@ -31,8 +31,24 @@
     padding: 0;
 }
 
+.home-wrapper {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    gap:32px;
+    padding: 40px;
+}
+
+.blob-img {
+  width: 320px;               
+  height: 320px;             
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  overflow: hidden;           
+  border: 3px solid #885F43;   
+}
+
 body {
-    background-color: #B8E2F2;
+    background-color: #b8e2f271;
     color: rgb(2, 11, 62);
     margin: 0;
     padding: 0;
