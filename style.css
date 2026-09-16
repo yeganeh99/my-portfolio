@@ -9,20 +9,20 @@
     white-space: nowrap;
     gap:64px;
     font-family: 'CormorantSc', serif;
-    font-size: 30px;
+    font-size:52px;
 }
 .nav-links a {
     text-decoration: none;
     display:inline-block;
     padding: 4px 12px;
-    border: 1px solid rgb(155, 155, 155);
+    border: 1px solid rgb(218, 202, 165);
     border-radius: 10px;
     color: rgb(0, 0, 0);
 }
 
 .nav-links a:hover {
-    color: rgb(95, 72, 10);
-    border-color: #eaeaea;
+    color: rgb(188, 99, 15);
+    border-color: #000000;
 }
 
 
@@ -48,8 +48,8 @@
 }
 
 body {
-    background-color: #b8e2f271;
-    color: rgb(2, 11, 62);
+    background-color: lab(90.57% -2.59 7.3);
+    color: rgb(133, 104, 45);
     margin: 0;
     padding: 0;
 }
