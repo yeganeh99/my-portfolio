@@ -137,19 +137,10 @@ nav {
 padding: 64px 48px;
 text-align: left;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+margin-top:48px;
 }
 
-.contact h2{
-    font-size: large;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: left;
-    margin-bottom: 64px;
-    color: #4b2407;
-    text-shadow: #372107;
-    padding-left: 32px;
 
-}
 
 .contact-list{
     display: flex;
@@ -170,8 +161,9 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
   text-decoration: none;   
   font-size: 32px;        
   color:#372107;
-  font-size: medium;
-  list-style: none
+  font-size: 32px;
+  list-style: none;
+  
 }
 
   
