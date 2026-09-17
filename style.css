@@ -99,9 +99,9 @@ nav {
 /* ---------- Contact Section Styles ---------- */
 
 #contact{
-    padding: 120px 40px 40px 40px;
+    padding-top: 120px;
     display: flex;
-    justify-content: center;
+    justify-content:center;
 }
 #contact .contact-row {
     display: flex;
@@ -110,7 +110,7 @@ nav {
     align-items: flex-start;
     gap: 32px;
     width: 100%;
-    padding: top 140px;
+    padding: top 180px;
   
 }
 
@@ -119,4 +119,12 @@ nav {
     font-family: 'CormorantSc', serif;
     font-size: 42px;
     
+}
+
+.contact-links a {
+    display:inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+
 }
