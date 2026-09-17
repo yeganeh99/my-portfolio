@@ -128,3 +128,8 @@ nav {
     gap: 24px;
 
 }
+
+.contact-links img {
+    width: 48px;
+    height: 48px;
+}
