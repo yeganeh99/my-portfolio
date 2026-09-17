@@ -95,3 +95,15 @@ nav {
     margin: 10px;
     margin-left: 40px;
 }
+
+/* ---------- Contact Section Styles ---------- */
+.contact{
+
+    display:flex;
+    justify-content:center;
+    flex-direction:row;
+    font-family: 'CormorantSc', serif;
+    font-size:42px;
+    padding:40px;
+    gap: 24px;
+}
