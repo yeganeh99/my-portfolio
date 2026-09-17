@@ -7,24 +7,25 @@
     display:flex;
     justify-content:center;
     white-space: nowrap;
-    gap:64px;
+    gap:42px;
     font-family: 'CormorantSc', serif;
-    font-size:52px;
+    font-size:32px;
 }
 .nav-links a {
+    justify-content:center;
     text-decoration: none;
     display:inline-block;
     padding: 4px 12px;
     border: 1px solid rgb(218, 202, 165);
-    border-radius: 10px;
-    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    color: rgb(62, 28, 1);
 }
 
 .nav-links a:hover {
-    color: rgb(188, 99, 15);
-    border-color: #654e1b;
+    color: rgb(201, 99, 4);
+    border-color: #372107;
     box-shadow: 0px 0px 20px rgba(126, 66, 10, 0.5);
-    background-color:#dbc2ad
+    background-color:#fdd4b2
 }
 
 
@@ -48,7 +49,7 @@ display:block;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   overflow: hidden;           
   border: 2px solid #885F43;   
-  box-shadow: 0px 0px 20px rgba(88, 88, 88, 0.5);
+  box-shadow: 0px 0px 20px rgba(84, 54, 39, 0.5);
 }
 
 .blob-img img {
