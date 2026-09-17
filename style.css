@@ -97,12 +97,26 @@ nav {
 }
 
 /* ---------- Contact Section Styles ---------- */
+
 #contact{
-display:flex;
-    justify-content:center;
-    flex-direction:row;
+    padding: 120px 40px 40px 40px;
+    display: flex;
+    justify-content: center;
+}
+#contact .contact-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 32px;
+    width: 100%;
+    padding: top 140px;
+  
+}
+
+#contact .r{
+    color:#4b2407;
     font-family: 'CormorantSc', serif;
-    font-size:24px;
-    padding:42px;
-    gap: 24px;
+    font-size: 42px;
+    
 }
