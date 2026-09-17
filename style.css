@@ -97,9 +97,8 @@ nav {
 }
 
 /* ---------- Contact Section Styles ---------- */
-.contact{
-
-    display:flex;
+#contact{
+display:flex;
     justify-content:center;
     flex-direction:row;
     font-family: 'CormorantSc', serif;
