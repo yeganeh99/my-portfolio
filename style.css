@@ -24,7 +24,7 @@
 .nav-links a:hover {
     color: rgb(201, 99, 4);
     border-color: #372107;
-    box-shadow: 0px 0px 20px rgba(126, 66, 10, 0.5);
+    box-shadow: 0px 0px 20px rgba(126, 66, 10, 20%);
     background-color:#fdd4b2
 }
 
@@ -40,6 +40,7 @@
     justify-content:center;
     gap:32px;
     padding: 40px;
+    
 }
 
 .blob-img {
@@ -49,7 +50,9 @@ display:block;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   overflow: hidden;           
   border: 2px solid #885F43;   
-  box-shadow: 0px 0px 20px rgba(84, 54, 39, 0.5);
+  box-shadow: 0px 0px 20px rgba(84, 54, 39, 20%);
+  padding-top: 80px;
+  
 }
 
 .blob-img img {
@@ -60,7 +63,7 @@ display:block;
 }
 
 body {
-    background-color: lab(90.42% 3.41 21.4);
+    background-color: lab(92.62% 2.66 16.71);
     color: rgb(54, 31, 7);
     margin: 0;
     padding: 0;
