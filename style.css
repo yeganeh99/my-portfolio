@@ -11,6 +11,7 @@
     font-family: 'CormorantSc', serif;
     font-size:48px;
     padding-top: 48px ;
+    list-style: none
 }
 .nav-links a {
     justify-content:center;
@@ -149,11 +150,12 @@ font-family: 'Courier New', Courier, monospace;
     gap: 32px;
     padding: 0;
     color:#372107
-    
+   
+
     
 }
 
-.contact-links a {
+.contact-list a {
   display: inline-flex;    
   align-items: center;     
   gap: 10px;               
@@ -161,10 +163,11 @@ font-family: 'Courier New', Courier, monospace;
   font-size: 32px;        
   color:#372107;
   font-size: medium;
+  list-style: none
 }
 
   
-.contact-links img {
+.contact-list img {
 width: 24px;           
   height: 24px;
 
