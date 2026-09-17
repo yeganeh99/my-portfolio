@@ -37,11 +37,11 @@
 
 
 #home {
-    min-height: 150vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 100px;
+    padding-top:64px;
     box-sizing: border-box;
 }
 
@@ -52,9 +52,18 @@
     justify-content:center;
     gap:64px;
     padding: 40px;
-    max-width: 1000px;
+    max-width: 1500px;
     width: 100%;
     
+}
+
+.home-bio{
+color: #372107;
+font-size: medium;
+line-height: 1.6;
+max-width: 520px;
+margin-top:24px;
+
 }
 
 .blob-img {
