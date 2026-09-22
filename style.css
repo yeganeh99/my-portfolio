@@ -183,3 +183,13 @@ width: 24px;
 h1, h2, h3 {
   font-family: var(--font-display); 
   font-weight: 400;}
+
+  .work-sample-image{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+
+}
+
