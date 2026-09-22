@@ -180,7 +180,7 @@ h1, h2, h3 {
 
 .work-sample-image{
   width: 100%;
-  max-width:500px;
+  max: width 700px;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -189,7 +189,7 @@ h1, h2, h3 {
 }
 
 .work-sample{
-background-color: #0b0b0b;
+background-color:#000000;
 color: aliceblue;
 margin-top: 100px;
 
