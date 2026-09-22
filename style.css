@@ -184,7 +184,14 @@ width: 24px;
   border: 1px solid #ddd;
 }
 
-
+.work-sample-image {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+}
 
 h1, h2, h3 {
   font-family: var(--font-display); 
