@@ -183,7 +183,7 @@ h1, h2, h3 {
   max-width: 700px;
   height: auto;
   display: block;
-  margin: 20px auto 0;
+  margin: 100px auto 0;
   border-radius: 18px;
    -webkit-mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%);
   mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%);
