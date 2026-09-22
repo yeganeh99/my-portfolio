@@ -178,23 +178,24 @@ h1, h2, h3 {
   font-family: var(--font-display); 
   font-weight: 400;}
 
-.work-sample-image{
+.work-sample-image {
   width: 100%;
-  max: width 700px;
+  max-width: 700px;
   height: auto;
   display: block;
-  margin: 0 auto;
-  
-
+  margin: 20px auto 0;
+  border-radius: 18px;
+   -webkit-mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%);
+  mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%);
 }
 
-.work-sample{
-background-color:#000000;
-color: aliceblue;
-margin-top: 100px;
 
+.work-sample {
+  background-color: #000000;
+  color: aliceblue;
+  margin-top: 100px;
 }
 
 .ozon-content{
-  margin-top: 100px;
+  margin-top: 150px;
 }
