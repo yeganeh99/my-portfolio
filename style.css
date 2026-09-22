@@ -171,14 +171,8 @@ width: 24px;
 /* ---------- Experience Section Styles ---------- */
 
 
-.work-sample-image {
-  display: block;
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  margin-top: 20px;
-  border: 1px solid #ddd;
-}
+
+  
 
 h1, h2, h3 {
   font-family: var(--font-display); 
@@ -190,6 +184,7 @@ h1, h2, h3 {
   height: auto;
   display: block;
   margin: 0 auto;
+  
 
 }
 
@@ -197,4 +192,9 @@ h1, h2, h3 {
 background-color: #0b0b0b;
 color: aliceblue;
 margin-top: 100px;
+
+}
+
+.ozon-content{
+  margin-top: 100px;
 }
