@@ -210,6 +210,8 @@ margin-bottom: 100px;
 
 }
 
-.ozon{
-  padding-left: 64px;
+.ozon {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
