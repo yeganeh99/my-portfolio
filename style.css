@@ -204,5 +204,8 @@ h1, h2, h3 {
   text-align: center;
   text-size:88px;
   text-shadow: #e2bfa8;
-  
+
+}
+body {
+  font-family: 'Space Grotesk', sans-serif;
 }
