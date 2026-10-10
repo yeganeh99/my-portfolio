@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
-<title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <title>Project Request | Portfolio</title>
 </head>
 <body>
 <header>
@@ -14,7 +14,7 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="Resume.html">Resume</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="projectrequest.html">Project Request</a></li>
+      <li><a href="Projectrequest.html">Project Request</a></li>
     </ul>
   </nav>
 </header>
@@ -22,19 +22,19 @@
 
     <h1>Fill out the form below to request a design project</h1>
 <form action="/Submit_form" method="post">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required placeholder="Enter your name"><br><br>
+    <label for="name">First name:</label>
+    <input type="text" id="name" name="name" autocomplete="given-name" required placeholder="Enter your first name"><br><br>
 
-<label for="familyname">Family Name:</label>
-<input type="text" id="familyname" name="familyname" required placeholder="Enter your family name"><br><br>
-<label for="Companyname">Company Name:</label>
-<input type="text" id="Companyname" name="Companyname" required placeholder="Enter your company name"><br><br>
-<label for="email"> Organization Email:</label>
-<input type="email" id="email" name="email" required placeholder="Enter your organization email"><br><br>
-<label for="linkedinaddress"> Linkedin Address:</label>
-<input type="url" id="linkedinaddress" name="linkedinaddress" required placeholder="Enter your LinkedIn address"><br><br>
+<label for="familyname">Last name:</label>
+<input type="text" id="familyname" name="familyname" autocomplete="family-name" required placeholder="Enter your last name"><br><br>
+<label for="companyname">Company name:</label>
+<input type="text" id="companyname" name="companyname" autocomplete="organization" required placeholder="Enter your company name"><br><br>
+<label for="email">Organization email:</label>
+<input type="email" id="email" name="email" autocomplete="email" required placeholder="Enter your organization email"><br><br>
+<label for="linkedinaddress">LinkedIn address:</label>
+<input type="url" id="linkedinaddress" name="linkedinaddress" autocomplete="url" required placeholder="https://www.linkedin.com/in/your-profile"><br><br>
 <label for="projectsummary">Project Description:</label>
-<input type="text" id="projectsummary" name="projectsummary" required placeholder="Enter a brief description of your project"><br><br>
+<textarea id="projectsummary" name="projectsummary" rows="5" required placeholder="Describe your project"></textarea><br><br>
 
 </form>
 
