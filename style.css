@@ -221,6 +221,16 @@ margin-bottom: 100px;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  margin-top: 128px;
+  margin-top: 180px;
 
+}
+label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
 }
