@@ -222,6 +222,7 @@ margin-bottom: 100px;
   justify-content:center;
   align-items:center;
   margin-top: 180px;
+  
 
 }
 label {
@@ -234,16 +235,15 @@ input, textarea {
   width: 100%;
   box-sizing: border-box;
   border-radius:16px;
-  margin-bottom:24px;
+  margin-bottom: 12px;
 }
 
 #submit {
  background-color:#c15a0a;
  color:#000000;
- font-weight:bold;
- font-size:32px;
+ font-size: 24px;
  border-radius:16px;
  border:2px solid #372107;
- margin-top:32px;
+ margin-top:24px;
 }
 
