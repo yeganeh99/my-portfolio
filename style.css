@@ -215,3 +215,9 @@ margin-bottom: 100px;
   margin: 0 auto;
   padding: 64px 20px;
 }
+
+.form-elements {
+  display:flex;
+  flex-direction:column;
+
+}
