@@ -234,3 +234,15 @@ input, textarea {
   width: 100%;
   box-sizing: border-box;
 }
+
+#submit {
+ background-color:#c15a0a;
+ color:#000000;
+ font-weight:bold;
+ font-size:32px;
+ border-radius:16px;
+ border:2px solid #372107;
+ margin-top:32px;
+
+
+}
