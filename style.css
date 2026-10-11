@@ -233,6 +233,8 @@ input, textarea {
   display: block;
   width: 100%;
   box-sizing: border-box;
+  border-radius:16px;
+  margin-bottom:24px;
 }
 
 #submit {
@@ -243,6 +245,5 @@ input, textarea {
  border-radius:16px;
  border:2px solid #372107;
  margin-top:32px;
-
-
 }
+
