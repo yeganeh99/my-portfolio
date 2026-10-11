@@ -235,15 +235,15 @@ input, textarea {
   width: 100%;
   box-sizing: border-box;
   border-radius:16px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 #submit {
  background-color:#c15a0a;
  color:#000000;
  font-size: 24px;
- border-radius:16px;
- border:2px solid #372107;
- margin-top:24px;
+ border-radius:10px;
+ border:1px solid #372107;
+ margin-top:16px;
 }
 
