@@ -2,6 +2,10 @@
 
 
 
+html {
+  scroll-behavior: smooth;
+}
+
 .nav-links{
     display:flex;
     justify-content:center;
@@ -27,6 +31,20 @@
     border-color: #794600;
     box-shadow: 0px 0px 20px rgba(254, 218, 185, 0.2);
     background-color:#c15a0a
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #794600;
+  border-radius: 20px;
+  background-color: #c15a0a;
+  color: #fff;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #794600;
 }
 
 
@@ -125,6 +143,7 @@ padding: 64px 48px;
 text-align: center;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 margin-top:80px;
+scroll-margin-top: 120px;
 }
 
 
@@ -245,4 +264,3 @@ input, textarea {
  border:1px solid #372107;
  margin-top:16px;
 }
-
