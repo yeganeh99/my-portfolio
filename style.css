@@ -69,6 +69,12 @@ html {
     
 }
 
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .home-bio{
 color: #372107;
 font-size:24px;
