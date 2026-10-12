@@ -19,25 +19,26 @@ html {
     text-decoration: none;
     display:inline-block;
     padding: 8px 22px;
-    border: 1px solid rgb(218, 202, 165);
+    border: 1px solid rgb(6, 6, 6);
     border-radius: 20px;
-    color: rgb(244, 111, 2);
+    color: #3e0000;
 }
 
 .nav-links a:hover {
-    color: rgb(17, 17, 16);
-    border-color: #794600;
+    color: rgb(255, 255, 255);
+    border-color: #050505;
     box-shadow: 0px 0px 20px rgba(254, 218, 185, 0.2);
-    background-color:#c15a0a
+  background-color: #3e0000;
+
 }
 
 .cta-button {
   display: inline-block;
   padding: 12px 24px;
-  border: 1px solid #794600;
+  border: 1px solid #f7f6f5;
   border-radius: 20px;
-  background-color: #c15a0a;
-  color: #fff;
+  background-color: #3e0000;
+  color: #e1e1e1;
   text-decoration: none;
 }
 
