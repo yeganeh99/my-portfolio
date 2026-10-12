@@ -1,7 +1,5 @@
 
 
-
-
 html {
   scroll-behavior: smooth;
 }
@@ -85,9 +83,10 @@ display:block;
   width: 500px;               
   height: 500px;             
   overflow: hidden;           
-  border: 2px solid #885F43;   
+  border: 2px solid #848484;   
   box-shadow: 0px 0px 20px rgba(84, 54, 39, 40%);
   box-shadow:#885F43;
+  border-radius: 20px;
 
   
 }
@@ -101,7 +100,7 @@ display:block;
 }
 
 body {
-    background-color: lab(60.17% 0 -0.01 / 0.721);
+    background-color:lab(98 0.01 -0.01);
     color: rgb(0, 0, 0);
     margin: 0;
     padding: 0;
@@ -128,7 +127,7 @@ nav {
 }
 #home h1{
 
-    color: #4b2407;
+    color: #010101;
     text-shadow: 2px 2px 4px rgba(40, 46, 13, 30%);
     margin-bottom: 48px;
    
