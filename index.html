@@ -32,30 +32,35 @@
         <p class="home-bio">
           I'm a former Product Manager turned Product & UX Designer. I combine strategic thinking with a user-first mindset to craft digital experiences that feel intuitive, purposeful, and impactful. Great design isn't just about aesthetics; it's about solving real problems for real people.
         </p>
-        <a class="cta-button" href="#contact">Contact me</a>
+        <a class="cta-button" href="#form">Discuss your project</a>
       </div>
     </div>
   </section>
+  <section id="form">
+    <div class="form-elements">
 
-  <section id="contact" class="contact">
-    <h2>Get in touch</h2>
-    <ul class="contact-list">
-      <li>
-        <img src="icone/email.svg" alt="">
-        <a href="mailto:yeganehghasemi981@gmail.com">Email</a>
-      </li>
-      <li>
-        <img src="icone/phone.svg" alt="">
-        <a href="tel:+12252667950">Phone</a>
-      </li>
-      <li>
-        <img src="icone/linkedin.svg" alt="">
-        <a href="https://www.linkedin.com/in/yeganeh-ghasemi-371a42195/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </li>
-    </ul>
+    <h1>Fill out the form below to request a design project</h1>
+<form action="/Submit_form" method="post">
+    <label for="name">First name:</label>
+    <input type="text" id="name" name="name" autocomplete="given-name" required placeholder="Enter your first name"><br><br>
+
+<label for="familyname">Last name:</label>
+<input type="text" id="familyname" name="familyname" autocomplete="family-name" required placeholder="Enter your last name"><br><br>
+<label for="companyname">Company name:</label>
+<input type="text" id="companyname" name="companyname" autocomplete="organization" required placeholder="Enter your company name"><br><br>
+<label for="email">Organization email:</label>
+<input type="email" id="email" name="email" autocomplete="email" required placeholder="Enter your organization email"><br><br>
+<label for="linkedinaddress">LinkedIn address:</label>
+<input type="url" id="linkedinaddress" name="linkedinaddress" autocomplete="url" required placeholder="https://www.linkedin.com/in/your-profile"><br><br>
+<label for="projectsummary">Project Description:</label>
+<textarea id="projectsummary" name="projectsummary" rows="5" required placeholder="Describe your project"></textarea><br><br>
+
+<input type="submit" id="submit" name="submit" value="Submit Request"><br>
+</form>
+
+    </div>
   </section>
 </main>
-
 
 </body>
 </html>
