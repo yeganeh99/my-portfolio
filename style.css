@@ -34,16 +34,16 @@ html {
 
 .cta-button {
   display: inline-block;
-  padding: 32px 48px;
-  border: 1px solid #f7f6f5;
+  padding: 24px 32px;
+  border: 1px solid #460d01;
   border-radius: 20px;
   background-color: #701901;
-  color: #e1e1e1;
+  color: #ffffff;
   text-decoration: none;
 }
 
 .cta-button:hover {
-  background-color: #701901;
+  background-color: #0a0a0a;
 }
 
 
