@@ -271,8 +271,8 @@ h1, h2, h3 {
 
 
 .work-sample {
-  background-color: #000000;
-  color: aliceblue;
+  background-color: #ebeaea;
+  color: rgb(0, 0, 0);
   margin-top: 100px;
 }
 
@@ -284,7 +284,7 @@ h1, h2, h3 {
 .page-title{
   text-align: center;
   text-size:88px;
-  text-shadow: #e2bfa8;
+  text-shadow: #797979;
   margin-top: 150px;
 
 }
@@ -308,7 +308,7 @@ margin-bottom: 100px;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  margin-top: 128px;
+  margin-top: 64px;
   padding: 0 20px;
   box-sizing: border-box;
 }
@@ -349,11 +349,11 @@ input, textarea {
 }
 
 #submit {
- background-color:#c15a0a;
- color:#000000;
+ background-color:#701901;
+ color:#fafafa;
  font-size: 24px;
  border-radius:10px;
- border:1px solid #372107;
+ border:1px solid #080808;
  margin-top:16px;
 }
 /* Tablet (≤ 1024px) */
