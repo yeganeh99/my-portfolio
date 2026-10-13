@@ -9,7 +9,8 @@ html {
     justify-content:center;
     white-space: nowrap;
     gap: 64px;
-    padding-top:48px ;
+    padding-top:16px ;
+    margin-top:24px;
     list-style: none;
     font-size: medium;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -20,7 +21,7 @@ html {
     display:inline-block;
     padding: 8px 22px;
     border: 1px solid rgb(6, 6, 6);
-    border-radius: 20px;
+    border-radius: 16px;
     color: #3e0000;
 }
 
@@ -107,7 +108,7 @@ display:flex;
   justify-content:center;
   flex: 0 0 400px;
   width: 400px;               
-  height: 600px;             
+  height: 500px;             
   overflow: hidden;           
   background-color:#e7edf3;
   border: 0.5px solid #848484;   
