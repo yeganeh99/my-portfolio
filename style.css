@@ -102,6 +102,10 @@ html {
   margin: 0;
 }
 
+.home-content .cta-button {
+  align-self: flex-start;
+}
+
 .blob-img {
 display:flex;
   align-items:center;
