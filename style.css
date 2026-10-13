@@ -21,14 +21,14 @@ html {
     padding: 8px 22px;
     border: 1px solid rgb(6, 6, 6);
     border-radius: 16px;
-    color: #3e0000;
+    color: #701901;
 }
 
 .nav-links a:hover {
     color: rgb(255, 255, 255);
     border-color: #050505;
     box-shadow: 0px 0px 20px rgba(254, 218, 185, 0.2);
-  background-color: #3e0000;
+  background-color: #701901;
 
 }
 
@@ -37,13 +37,13 @@ html {
   padding: 12px 24px;
   border: 1px solid #f7f6f5;
   border-radius: 20px;
-  background-color: #3e0000;
+  background-color: #701901;
   color: #e1e1e1;
   text-decoration: none;
 }
 
 .cta-button:hover {
-  background-color: #794600;
+  background-color: #701901;
 }
 
 
