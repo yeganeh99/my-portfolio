@@ -141,10 +141,7 @@ body {
 }
 
 header {
-    position: fixed;
-    top: 0;
     width: 100%;
-  
 }
 
 nav {
@@ -311,6 +308,11 @@ input, textarea {
     align-items: center;
     gap: 12px;
   }
+  .home-wrapper {
+    gap: 24px;
+    padding: 20px;
+  }
+
 
   .form-elements {
     display: grid;
@@ -321,4 +323,30 @@ input, textarea {
   .blob-img { width: 100%; max-width: 300px; height: auto; aspect-ratio: 1 / 1; }
   .home-content .cta-button { align-self: center;
   max-width: 100%; }
+}
+
+
+/* Tablet (≤ 1024px) */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 24px;
+    padding-top: 32px;
+  }
+
+  .home-wrapper {
+    gap: 40px;
+    padding: 32px;
+  }
+
+  .blob-img {
+    flex: 0 0 360px;
+    width: 360px;
+    height: 360px;
+    border-radius: 60px;
+  }
+
+  .myhelp {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }
