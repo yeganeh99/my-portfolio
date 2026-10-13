@@ -300,6 +300,33 @@ input, textarea {
  border:1px solid #372107;
  margin-top:16px;
 }
+/* Tablet (≤ 1024px) */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 24px;
+    padding-top: 32px;
+  }
+
+  .home-wrapper {
+    gap: 40px;
+    padding: 32px;
+  }
+
+  .blob-img {
+    flex: 0 0 360px;
+    width: 360px;
+    height: 360px;
+    border-radius: 60px;
+  }
+
+  .myhelp {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* mobile (≤ 640px) */
 
 
 @media(max-width:640px){
@@ -326,27 +353,3 @@ input, textarea {
 }
 
 
-/* Tablet (≤ 1024px) */
-@media (max-width: 1024px) {
-  .nav-links {
-    gap: 24px;
-    padding-top: 32px;
-  }
-
-  .home-wrapper {
-    gap: 40px;
-    padding: 32px;
-  }
-
-  .blob-img {
-    flex: 0 0 360px;
-    width: 360px;
-    height: 360px;
-    border-radius: 60px;
-  }
-
-  .myhelp {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
