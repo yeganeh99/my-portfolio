@@ -303,3 +303,17 @@ input, textarea {
  border:1px solid #372107;
  margin-top:16px;
 }
+
+
+@media(max-width:640px){
+  .nav-links {
+    display:flex;
+    flex-direction:column;
+  }
+  .home-wrapper {
+    display:flex;
+    flex-direction:column;
+
+  }
+  .home-content { align-items: center; text-align: center; }
+}
