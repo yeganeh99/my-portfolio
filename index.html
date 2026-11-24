@@ -6,7 +6,7 @@
 <title>Yelena Ghasemi — Product &amp; UX Designer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hina+Mincho&display=swap" rel="stylesheet">
 <script>
 (function(r){try{if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches&&typeof r.animate==="function"){r.classList.add("px-intro");window.__pxFailsafe=setTimeout(function(){r.classList.remove("px-intro")},4000)}}catch(e){}})(document.documentElement);
 </script>
@@ -27,6 +27,7 @@
 }
 @supports (height:100dvh){ :root{ --vh:100dvh; } }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 html,body{min-height:100%;background:var(--bg);overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:geometricPrecision}
 body{position:relative;width:100%;min-height:100%;color:var(--ink);font-family:"Hina Mincho",serif}
 .stage{position:relative;width:100%;height:var(--vh);min-height:480px;overflow:hidden;background:var(--bg)}
@@ -43,9 +44,9 @@ body{position:relative;width:100%;min-height:100%;color:var(--ink);font-family:"
 .copy{transition:opacity .3s ease,visibility .3s ease}
 .pill-links-visible .copy--tl,.pill-links-visible .copy--tr{visibility:hidden;opacity:0}
 .title{position:absolute;left:50%;z-index:3;width:max-content;top:calc(378 * var(--sc));transform:translateX(-50%);
-font:400 calc(48 * var(--sc))/1 var(--sans);font-kerning:none;letter-spacing:-0.01em;color:#000;text-align:center;white-space:nowrap;opacity:0;translate:0 12px;transition:opacity .7s ease,translate .7s cubic-bezier(.16,1,.3,1)}
+font:400 calc(48 * var(--sc))/1 var(--sans);font-kerning:none;letter-spacing:-0.01em;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.55);text-align:center;white-space:nowrap;opacity:0;translate:0 12px;transition:opacity .7s ease,translate .7s cubic-bezier(.16,1,.3,1)}
 .title span{display:inline-block;margin-left:calc(var(--k,0) * var(--sc))}
-.title-subtitle{position:absolute;left:50%;z-index:3;top:calc(378 * var(--sc) + 48 * var(--sc) + 20px);width:max-content;transform:translateX(-50%);color:#000;font:400 calc(48 * var(--sc))/1.2 var(--sans);text-align:center;white-space:nowrap;opacity:0;translate:0 12px;transition:opacity .7s ease .12s,translate .7s cubic-bezier(.16,1,.3,1) .12s}
+.title-subtitle{position:absolute;left:50%;z-index:3;top:calc(378 * var(--sc) + 48 * var(--sc) + 20px);width:max-content;transform:translateX(-50%);color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.55);font:400 calc(48 * var(--sc))/1.2 var(--sans);text-align:center;white-space:nowrap;opacity:0;translate:0 12px;transition:opacity .7s ease .12s,translate .7s cubic-bezier(.16,1,.3,1) .12s}
 .hero-copy-visible .title,.hero-copy-visible .title-subtitle{opacity:1;translate:0 0}
 .pill-links{position:absolute;inset:0;z-index:2;visibility:hidden;opacity:0;pointer-events:none;transition:opacity .3s ease,visibility .3s}
 .pill-links.is-visible{visibility:visible;opacity:1}
@@ -58,8 +59,8 @@ font:500 calc(28 * var(--u))/1.15 var(--mono);letter-spacing:-0.04em;text-align:
 .glitch{position:relative}
 .title.glitch{word-spacing:calc(24 * var(--sc))}
 .glitch::before,.glitch::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none}
-.glitch::before{animation:glitch-1 5s infinite linear alternate-reverse;clip-path:polygon(0 0,100% 0,100% 35%,0 35%);transform:translateX(-1px);color:rgba(0,0,0,.25)}
-.glitch::after{animation:glitch-2 5s infinite linear alternate-reverse;clip-path:polygon(0 65%,100% 65%,100% 100%,0 100%);transform:translateX(1px);color:rgba(0,0,0,.25)}
+.glitch::before{animation:glitch-1 5s infinite linear alternate-reverse;clip-path:polygon(0 0,100% 0,100% 35%,0 35%);transform:translateX(-1px);color:rgba(255,255,255,.35)}
+.glitch::after{animation:glitch-2 5s infinite linear alternate-reverse;clip-path:polygon(0 65%,100% 65%,100% 100%,0 100%);transform:translateX(1px);color:rgba(255,255,255,.35)}
 @keyframes glitch-1{0%,100%{opacity:0;transform:translateX(0)}7%,9%{opacity:1;transform:translateX(-1.5px) skewX(-0.4deg)}10%{opacity:0}47%,49%{opacity:1;transform:translateX(1.5px) skewX(0.4deg)}50%{opacity:0}}
 @keyframes glitch-2{0%,100%{opacity:0;transform:translateX(0)}27%,29%{opacity:1;transform:translateX(1.5px) skewX(0.4deg)}30%{opacity:0}77%,79%{opacity:1;transform:translateX(-1.5px) skewX(-0.4deg)}80%{opacity:0}}
 a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
@@ -80,94 +81,111 @@ a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 .ln>span{display:inline-block}
 .px-intro .ln{overflow:hidden}
 .px-intro .ln>span{translate:0 105%}
-.project-form{min-height:100vh;padding:clamp(48px,8vw,112px) 24px;background:#24343c;color:var(--ink)}
-.project-form__inner{width:min(100%,600px);margin:0 auto}
-.project-form h2{margin-bottom:32px;font:400 clamp(26px,4vw,42px)/1.1 var(--sans)}
-.project-form form{display:grid;gap:12px}
-.project-form label{font:400 14px/1.4 "Hina Mincho",serif;letter-spacing:-0.025em;text-transform:uppercase}
-.project-form input,.project-form textarea{width:100%;padding:14px;border:1px solid rgba(255,255,255,.45);border-radius:0;background:transparent;color:var(--ink);font:400 15px/1.5 "Hina Mincho",serif}
-.project-form input::placeholder,.project-form textarea::placeholder{color:rgba(255,255,255,.65)}
-.project-form input[type="submit"]{width:auto;justify-self:start;margin-top:8px;padding:14px 22px;background:#000;cursor:pointer;text-transform:uppercase}
-.project-form input[type="submit"]:hover{background:#fff;color:#000}
-@media(max-width:560px){.project-form{padding:56px 20px}}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(16,16,16,.5);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.site-nav{display:flex;justify-content:center;align-items:center;padding:24px}
+.nav-links{display:flex;gap:32px;margin:0;padding:0;list-style:none;font:400 14px/1 "Courier New",monospace;text-transform:uppercase;letter-spacing:.08em}
+.nav-links a{position:relative;color:#fff;text-decoration:none;padding:4px 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.nav-links a:hover::after,.nav-links a:focus-visible::after{transform:scaleX(1);transform-origin:left}
+@media (max-width:640px){.site-nav{padding:16px 12px}.nav-links{gap:20px;font-size:12px}}
+.amy-intro{height:260vh;background:#fff;color:#111}
+.amy-intro-sticky{position:sticky;top:72px;height:calc(100vh - 72px);display:flex;flex-direction:column;justify-content:center;padding:0 clamp(24px,6vw,80px);box-sizing:border-box}
+.amy-intro-text{max-width:620px}
+.amy-intro-line{margin:0;font:400 clamp(40px,6vw,64px)/1.18 "Gloock",serif;letter-spacing:-0.01em}
+.amy-intro-line--primary{color:#1d1d1f;transition:color .08s linear}
+.amy-intro-line .amy-accent{color:#1d1d1f;transition:color .08s linear}
+.amy-intro-line--secondary{color:#ffffff;transition:color .08s linear}
+.amy-intro-scroll{position:absolute;left:50%;bottom:32px;transform:translateX(-50%);font:500 14px/1 "Hina Mincho",serif;color:rgba(0,97,201,.6);letter-spacing:.02em}
+@media (max-width:640px){.amy-intro-sticky{top:56px;height:calc(100vh - 56px)}.amy-intro-line{font-size:clamp(34px,10vw,48px)}}
+.about-section{position:relative;min-height:100vh;display:flex;align-items:center;padding:128px 24px;background:#101010;color:#fff;overflow:hidden}
+.about-bg-number{position:absolute;left:32px;top:50%;transform:translateY(-50%);font:700 clamp(12rem,30vw,30rem)/1 var(--sans);color:rgba(255,255,255,.05);pointer-events:none;user-select:none}
+.about-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,96px);width:min(100%,1100px);margin:0 auto}
+.about-label{display:block;margin-bottom:32px;font:400 12px/1 "Courier New",monospace;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.about-text{font:300 clamp(1.5rem,2.4vw,2.25rem)/1.45 var(--sans);color:#fff}
+.text-stroke{-webkit-text-stroke:1px #fff;color:transparent;font-weight:700}
+.skills-list{list-style:none;display:flex;flex-direction:column;gap:16px;padding:0;margin:0}
+.skill-item{display:flex;align-items:center;gap:16px;font:400 1.125rem/1.4 var(--sans);cursor:default}
+.skill-num{font:400 12px/1 "Courier New",monospace;color:rgba(255,255,255,.55);transition:color .3s ease}
+.skill-name{position:relative;overflow:hidden;display:inline-block}
+.skill-name-inner,.skill-name-clone{display:block;transition:transform .3s ease}
+.skill-name-clone{position:absolute;top:100%;left:0}
+.skill-item:hover .skill-name-inner,.skill-item:hover .skill-name-clone{transform:translateY(-100%)}
+.skill-item:hover .skill-num{color:#fff}
+.skill-line{flex:1;height:1px;margin-left:16px;background:rgba(255,255,255,.2);transform:scaleX(0);transform-origin:left;transition:transform .5s ease}
+.skill-item:hover .skill-line{transform:scaleX(1)}
+@media (max-width:900px){.about-inner{grid-template-columns:1fr}.about-bg-number{left:-8px}}
 </style>
 </head>
 <body>
-<main class="stage">
-<div class="scene" aria-hidden="false">
-<video class="hero-video" loop muted playsinline preload="auto" aria-hidden="true">
-<source src="Img/glass-circle-split.mp4" type="video/mp4">
-</video>
-
-<h1 class="title glitch" aria-label="Yelena Ghasemi" data-text="YELENA GHASEMI">YELENA GHASEMI</h1>
-<p class="title-subtitle glitch" data-text="UX Designer">UX Designer</p>
-</div>
-<div class="ui">
-<p class="copy copy--tl"><span class="ln"><span>Product &amp; UX</span></span><span class="ln"><span>Designer.</span></span></p>
-<p class="copy copy--tr"><span class="ln"><span>Thoughtful digital</span></span><span class="ln"><span>experiences shaped</span></span><span class="ln"><span>around people.</span></span></p>
-<nav class="pill-links" aria-label="Primary navigation">
-<a class="pill-link" href="contact.html"><span>Get In Touch</span></a>
-<a class="pill-link" href="Resume.html"><span>View My Work</span></a>
-<a class="pill-link" href="Resume.html"><span>My Resume</span></a>
-</nav>
-<p class="copy copy--bl"><span class="ln"><span>Strategy meets</span></span><span class="ln"><span>user-first design.</span></span></p>
-<p class="copy copy--br"><span class="ln"><span>Ideas shaped</span></span><span class="ln"><span>into impact.</span></span></p>
-</div>
+<header class="site-header">
+  <nav class="site-nav" aria-label="Primary">
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="Resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+<section class="amy-intro" aria-label="Intro">
+  <div class="amy-intro-sticky">
+    <div class="amy-intro-text">
+      <p class="amy-intro-line amy-intro-line--primary" id="amy-intro-primary">Hi there, I’m <span class="amy-accent" id="amy-intro-accent">Yelena.</span></p>
+      <p class="amy-intro-line amy-intro-line--secondary" id="amy-intro-secondary">a product &amp; UX designer.</p>
+    </div>
+    <p class="amy-intro-scroll" aria-hidden="true">Scroll</p>
+  </div>
+</section>
 </main>
-<section class="project-form" id="form">
-<div class="project-form__inner">
-<h2>Tell me about your project</h2>
-<form action="/Submit_form" method="post">
-<label for="name">First name</label>
-<input type="text" id="name" name="name" autocomplete="given-name" required placeholder="Enter your first name">
-<label for="familyname">Last name</label>
-<input type="text" id="familyname" name="familyname" autocomplete="family-name" required placeholder="Enter your last name">
-<label for="companyname">Company name</label>
-<input type="text" id="companyname" name="companyname" autocomplete="organization" required placeholder="Enter your company name">
-<label for="email">Organization email</label>
-<input type="email" id="email" name="email" autocomplete="email" required placeholder="Enter your organization email">
-<label for="linkedinaddress">LinkedIn address</label>
-<input type="url" id="linkedinaddress" name="linkedinaddress" autocomplete="url" required placeholder="https://www.linkedin.com/in/your-profile">
-<label for="projectsummary">Project description</label>
-<textarea id="projectsummary" name="projectsummary" rows="5" required placeholder="Describe your project"></textarea>
-<input type="submit" id="submit" name="submit" value="Submit request">
-</form>
-</div>
+<section id="about" class="about-section" aria-label="About me">
+  <span class="about-bg-number" aria-hidden="true">01</span>
+  <div class="about-inner">
+    <div class="about-intro">
+      <span class="about-label">About Me</span>
+      <p class="about-text">I'm Yelena Ghasemi, a Product &amp; UX Designer focused on crafting thoughtful digital experiences shaped around people. I combine <span class="text-stroke">strategy</span> with <span class="text-stroke">user-first design</span> to turn ideas into clear, meaningful products.</p>
+    </div>
+    <div class="about-expertise">
+      <span class="about-label">Expertise</span>
+      <ul class="skills-list">
+        <li class="skill-item"><span class="skill-num">01</span><span class="skill-name"><span class="skill-name-inner">User Research</span><span class="skill-name-clone" aria-hidden="true">User Research</span></span><span class="skill-line" aria-hidden="true"></span></li>
+        <li class="skill-item"><span class="skill-num">02</span><span class="skill-name"><span class="skill-name-inner">UX / UI Design</span><span class="skill-name-clone" aria-hidden="true">UX / UI Design</span></span><span class="skill-line" aria-hidden="true"></span></li>
+        <li class="skill-item"><span class="skill-num">03</span><span class="skill-name"><span class="skill-name-inner">Interaction Design</span><span class="skill-name-clone" aria-hidden="true">Interaction Design</span></span><span class="skill-line" aria-hidden="true"></span></li>
+        <li class="skill-item"><span class="skill-num">04</span><span class="skill-name"><span class="skill-name-inner">Prototyping &amp; Testing</span><span class="skill-name-clone" aria-hidden="true">Prototyping &amp; Testing</span></span><span class="skill-line" aria-hidden="true"></span></li>
+        <li class="skill-item"><span class="skill-num">05</span><span class="skill-name"><span class="skill-name-inner">Design Systems</span><span class="skill-name-clone" aria-hidden="true">Design Systems</span></span><span class="skill-line" aria-hidden="true"></span></li>
+        <li class="skill-item"><span class="skill-num">06</span><span class="skill-name"><span class="skill-name-inner">Product Strategy</span><span class="skill-name-clone" aria-hidden="true">Product Strategy</span></span><span class="skill-line" aria-hidden="true"></span></li>
+      </ul>
+    </div>
+  </div>
 </section>
 <script>
 (function(){
+var intro=document.querySelector(".amy-intro");
+var primary=document.getElementById("amy-intro-primary");
+var accent=document.getElementById("amy-intro-accent");
+var secondary=document.getElementById("amy-intro-secondary");
+if(intro&&primary&&accent&&secondary){
+var dark=[29,29,31];
+var lightBlue=[201,227,255];
+var accentBlue=[179,218,255];
+var white=[255,255,255];
+function clamp(v,min,max){return v<min?min:v>max?max:v}
+function mix(from,to,p){return from.map(function(v,i){return Math.round(v+(to[i]-v)*p)})}
+function rgb(c){return "rgb("+c[0]+","+c[1]+","+c[2]+")"}
+function updateIntro(){
+var rect=intro.getBoundingClientRect();
+var scrollable=intro.offsetHeight-window.innerHeight;
+var progress=scrollable>0?clamp(-rect.top/scrollable,0,1):1;
+primary.style.color=rgb(mix(dark,lightBlue,progress));
+accent.style.color=rgb(mix(dark,accentBlue,progress));
+secondary.style.color=rgb(mix(white,dark,progress));
+}
+updateIntro();
+window.addEventListener("scroll",updateIntro,{passive:true});
+window.addEventListener("resize",updateIntro);
+}
 var root=document.documentElement;
-var video=document.querySelector(".hero-video");
-var pillLinks=document.querySelector(".pill-links");
-var motion=matchMedia("(prefers-reduced-motion: reduce)");
-function updatePillLinks(){
-var visible=motion.matches||video.currentTime>=8.9;
-pillLinks.classList.toggle("is-visible",visible);
-root.classList.toggle("pill-links-visible",visible);
-}
-function updateHeroCopy(){
-if(motion.matches||video.currentTime>=8.9) root.classList.add("hero-copy-visible");
-}
-function updateVideo(){
-if(motion.matches){
-video.pause();
-if(video.readyState>=1&&video.currentTime<8.9) video.currentTime=9.5;
-updatePillLinks();
-updateHeroCopy();
-return
-}
-var playback=video.play();
-if(playback&&playback.catch) playback.catch(function(){video.controls=true});
-}
-video.addEventListener("timeupdate",function(){updatePillLinks();updateHeroCopy()});
-video.addEventListener("seeked",updatePillLinks);
-video.addEventListener("seeked",updateHeroCopy);
-video.addEventListener("loadedmetadata",updateVideo);
-updateVideo();
-if(motion.addEventListener) motion.addEventListener("change",updateVideo);
 if(!root.classList.contains("px-intro")) return;
-var EXPO ="cubic-bezier(.16,1,.3,1)",
-SOFT ="cubic-bezier(.25,1,.5,1)";
+var EXPO="cubic-bezier(.16,1,.3,1)";
 var narrow=matchMedia("(max-width:560px)").matches;
 var S=narrow?.8:1;
 var anims=[];
