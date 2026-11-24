@@ -55,6 +55,13 @@ font:500 calc(28 * var(--u))/1.15 var(--mono);letter-spacing:-0.04em;text-align:
 .pill-link:nth-child(2){left:40.3%}
 .pill-link:nth-child(3){left:64.5%}
 .pill-link:hover{color:#000;text-shadow:0 1px 6px #fff}
+.glitch{position:relative}
+.title.glitch{word-spacing:calc(24 * var(--sc))}
+.glitch::before,.glitch::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none}
+.glitch::before{animation:glitch-1 5s infinite linear alternate-reverse;clip-path:polygon(0 0,100% 0,100% 35%,0 35%);transform:translateX(-1px);color:rgba(0,0,0,.25)}
+.glitch::after{animation:glitch-2 5s infinite linear alternate-reverse;clip-path:polygon(0 65%,100% 65%,100% 100%,0 100%);transform:translateX(1px);color:rgba(0,0,0,.25)}
+@keyframes glitch-1{0%,100%{opacity:0;transform:translateX(0)}7%,9%{opacity:1;transform:translateX(-1.5px) skewX(-0.4deg)}10%{opacity:0}47%,49%{opacity:1;transform:translateX(1.5px) skewX(0.4deg)}50%{opacity:0}}
+@keyframes glitch-2{0%,100%{opacity:0;transform:translateX(0)}27%,29%{opacity:1;transform:translateX(1.5px) skewX(0.4deg)}30%{opacity:0}77%,79%{opacity:1;transform:translateX(-1.5px) skewX(-0.4deg)}80%{opacity:0}}
 a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media (orientation:portrait) and (min-width:561px){ :root{ --u:clamp(.72px, calc(var(--vw) / 860), 1.6px); } }
@@ -68,7 +75,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 .pill-link,.pill-link:nth-child(n){position:relative;top:auto;left:auto;width:auto;height:64px;padding:6px;border:0;border-radius:20px;background:transparent;color:#fff;font-size:18px;letter-spacing:-0.02em;text-shadow:none}
 .pill-link:hover{color:#fff;background:rgba(0,0,0,.82);text-shadow:none}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.glitch::before,.glitch::after{animation:none;opacity:0}}
 .ln{display:block}
 .ln>span{display:inline-block}
 .px-intro .ln{overflow:hidden}
@@ -92,8 +99,8 @@ a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 <source src="Img/glass-circle-split.mp4" type="video/mp4">
 </video>
 
-<h1 class="title" aria-label="Yelena Ghasemi"><span aria-hidden="true" style="--k:0">Y</span><span aria-hidden="true" style="--k:0">E</span><span aria-hidden="true" style="--k:0">L</span><span aria-hidden="true" style="--k:0">E</span><span aria-hidden="true" style="--k:0">N</span><span aria-hidden="true" style="--k:0">A</span><span aria-hidden="true" style="--k:24">G</span><span aria-hidden="true" style="--k:0">H</span><span aria-hidden="true" style="--k:0">A</span><span aria-hidden="true" style="--k:0">S</span><span aria-hidden="true" style="--k:0">E</span><span aria-hidden="true" style="--k:0">M</span><span aria-hidden="true" style="--k:0">I</span></h1>
-<p class="title-subtitle">UX Designer</p>
+<h1 class="title glitch" aria-label="Yelena Ghasemi" data-text="YELENA GHASEMI">YELENA GHASEMI</h1>
+<p class="title-subtitle glitch" data-text="UX Designer">UX Designer</p>
 </div>
 <div class="ui">
 <p class="copy copy--tl"><span class="ln"><span>Product &amp; UX</span></span><span class="ln"><span>Designer.</span></span></p>
