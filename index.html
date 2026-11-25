@@ -91,11 +91,12 @@ a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 .amy-intro{height:260vh;background:#fff;color:#111}
 .amy-intro-sticky{position:sticky;top:72px;height:calc(100vh - 72px);display:flex;flex-direction:column;justify-content:center;padding:0 clamp(24px,6vw,80px);box-sizing:border-box}
 .amy-intro-text{max-width:620px}
-.amy-intro-line{margin:0;font:400 clamp(40px,6vw,64px)/1.18 "Gloock",serif;letter-spacing:-0.01em}
-.amy-intro-line--primary{color:#1d1d1f;transition:color .08s linear}
-.amy-intro-line .amy-accent{color:#1d1d1f;transition:color .08s linear}
-.amy-intro-line--secondary{color:#ffffff;transition:color .08s linear}
-.amy-intro-scroll{position:absolute;left:50%;bottom:32px;transform:translateX(-50%);font:500 14px/1 "Hina Mincho",serif;color:rgba(0,97,201,.6);letter-spacing:.02em}
+.amy-intro-line{margin:0;font:400 clamp(40px,6vw,64px)/1.18 "Gloock",serif;letter-spacing:-0.01em;color:#1d1d1f}
+.amy-intro-line--primary{white-space:nowrap}
+.intro-fade{display:inline-block;overflow:hidden;vertical-align:bottom;white-space:nowrap;max-width:20em;will-change:opacity,max-width}
+.intro-keep{display:inline-block;vertical-align:bottom}
+.amy-intro-line--secondary{margin-top:0;max-height:0;overflow:hidden;opacity:0;pointer-events:none;will-change:transform,opacity,max-height,margin-top}
+.amy-intro-scroll{position:absolute;left:50%;bottom:32px;transform:translateX(-50%);font:500 14px/1 "Hina Mincho",serif;color:rgba(0,97,201,.6);letter-spacing:.02em;transition:opacity .2s linear}
 @media (max-width:640px){.amy-intro-sticky{top:56px;height:calc(100vh - 56px)}.amy-intro-line{font-size:clamp(34px,10vw,48px)}}
 .about-section{position:relative;min-height:100vh;display:flex;align-items:center;padding:128px 24px;background:#101010;color:#fff;overflow:hidden}
 .about-bg-number{position:absolute;left:32px;top:50%;transform:translateY(-50%);font:700 clamp(12rem,30vw,30rem)/1 var(--sans);color:rgba(255,255,255,.05);pointer-events:none;user-select:none}
@@ -130,8 +131,10 @@ a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 <section class="amy-intro" aria-label="Intro">
   <div class="amy-intro-sticky">
     <div class="amy-intro-text">
-      <p class="amy-intro-line amy-intro-line--primary" id="amy-intro-primary">Hi there, I’m <span class="amy-accent" id="amy-intro-accent">Yelena.</span></p>
-      <p class="amy-intro-line amy-intro-line--secondary" id="amy-intro-secondary">a product &amp; UX designer.</p>
+      <p class="amy-intro-line amy-intro-line--primary" id="amy-intro-primary">
+        <span class="intro-fade intro-fade--lead">Hi there, </span><span class="intro-keep">I'm</span><span class="intro-fade intro-fade--trail"> Yelena.</span>
+      </p>
+      <p class="amy-intro-line amy-intro-line--secondary" id="amy-intro-secondary" aria-hidden="true">A UX designer</p>
     </div>
     <p class="amy-intro-scroll" aria-hidden="true">Scroll</p>
   </div>
@@ -160,24 +163,47 @@ a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 <script>
 (function(){
 var intro=document.querySelector(".amy-intro");
-var primary=document.getElementById("amy-intro-primary");
-var accent=document.getElementById("amy-intro-accent");
+var fades=document.querySelectorAll(".intro-fade");
 var secondary=document.getElementById("amy-intro-secondary");
-if(intro&&primary&&accent&&secondary){
-var dark=[29,29,31];
-var lightBlue=[201,227,255];
-var accentBlue=[179,218,255];
-var white=[255,255,255];
+var scrollHint=document.querySelector(".amy-intro-scroll");
+if(intro&&fades.length&&secondary){
+var reduceMotion=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 function clamp(v,min,max){return v<min?min:v>max?max:v}
-function mix(from,to,p){return from.map(function(v,i){return Math.round(v+(to[i]-v)*p)})}
-function rgb(c){return "rgb("+c[0]+","+c[1]+","+c[2]+")"}
+function ease(t){return t<0.5?2*t*t:1-Math.pow(-2*t+2,2)/2}
+function setFades(opacity,maxWidth){
+for(var i=0;i<fades.length;i++){
+  fades[i].style.opacity=opacity;
+  fades[i].style.maxWidth=maxWidth;
+}
+}
 function updateIntro(){
 var rect=intro.getBoundingClientRect();
 var scrollable=intro.offsetHeight-window.innerHeight;
 var progress=scrollable>0?clamp(-rect.top/scrollable,0,1):1;
-primary.style.color=rgb(mix(dark,lightBlue,progress));
-accent.style.color=rgb(mix(dark,accentBlue,progress));
-secondary.style.color=rgb(mix(white,dark,progress));
+if(reduceMotion){
+  var showFinal=progress>=0.5;
+  setFades(showFinal?"0":"1",showFinal?"0":"20em");
+  secondary.style.opacity=showFinal?"1":"0";
+  secondary.style.maxHeight=showFinal?"2em":"0";
+  secondary.style.marginTop=showFinal?"0.05em":"0";
+  secondary.style.transform="none";
+  secondary.setAttribute("aria-hidden",showFinal?"false":"true");
+  secondary.style.pointerEvents=showFinal?"auto":"none";
+  if(scrollHint){scrollHint.style.opacity=progress<0.1?"1":"0"}
+  return;
+}
+var fadeOut=clamp((progress-0.03)/0.45,0,1);
+var lineIn=clamp((progress-0.02)/0.35,0,1);
+var f=ease(fadeOut);
+var s=ease(lineIn);
+setFades(String(1-f),(20*(1-f))+"em");
+secondary.style.opacity=String(s);
+secondary.style.maxHeight=(2*s)+"em";
+secondary.style.marginTop=(0.05*s)+"em";
+secondary.style.transform="translateY("+((1-s)*0.6)+"em)";
+secondary.setAttribute("aria-hidden",s>0.1?"false":"true");
+secondary.style.pointerEvents=s>0.5?"auto":"none";
+if(scrollHint){scrollHint.style.opacity=String(clamp(1-progress*4,0,1))}
 }
 updateIntro();
 window.addEventListener("scroll",updateIntro,{passive:true});
