@@ -86,21 +86,21 @@ a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 .nav-links a[aria-current="page"]::after{transform:scaleX(1);transform-origin:left}
 @media (max-width:640px){.site-nav{padding:16px 12px}.nav-links{gap:12px 20px;font-size:12px}}
 .amy-intro{height:130vh;background:#fff;color:#111}
-.amy-intro-sticky{position:sticky;top:72px;height:calc(100vh - 72px);display:flex;flex-direction:column;justify-content:center;padding:0 clamp(24px,6vw,80px);box-sizing:border-box}
-.amy-intro-text{max-width:620px}
+.amy-intro-sticky{position:sticky;top:72px;height:calc(100vh - 72px);display:flex;flex-direction:row;align-items:center;justify-content:center;gap:clamp(32px,6vw,80px);padding:0 clamp(24px,6vw,80px);box-sizing:border-box}
+.amy-intro-portrait{flex:0 1 380px;width:clamp(220px,32vw,380px);max-height:min(58vh,520px);margin:0}
+.amy-intro-portrait img{display:block;width:100%;max-height:min(58vh,520px);object-fit:contain;object-position:center bottom;border-radius:30px;box-shadow:0 4px 30px rgba(0,0,0,.3)}
+.amy-intro-text{flex:0 1 620px;max-width:620px}
 .amy-intro-line{margin:0;font:400 clamp(44px,6.4vw,68px)/1.18 "Forum",serif;letter-spacing:-0.01em;color:#1d1d1f}
 .amy-intro-line--primary{white-space:nowrap}
 .intro-fade{display:inline-block;overflow:hidden;vertical-align:bottom;white-space:nowrap;max-width:20em;will-change:opacity,max-width}
 .intro-keep{display:inline-block;vertical-align:bottom}
 .amy-intro-line--secondary{margin-top:0;max-height:0;overflow:hidden;opacity:0;pointer-events:none;will-change:transform,opacity,max-height,margin-top}
 .amy-intro-scroll{position:absolute;left:50%;bottom:32px;transform:translateX(-50%);font:500 14px/1 "Forum",serif;color:rgba(0,97,201,.6);letter-spacing:.02em;transition:opacity .2s linear}
-@media (max-width:640px){.amy-intro-sticky{top:56px;height:calc(100vh - 56px)}.amy-intro-line{font-size:clamp(36px,10.5vw,51px)}}
+@media (max-width:640px){.amy-intro-sticky{top:56px;height:calc(100vh - 56px);flex-direction:column;gap:20px}.amy-intro-portrait{flex:0 1 auto;width:min(42vw,220px);max-height:32vh}.amy-intro-portrait img{max-height:32vh}.amy-intro-text{flex:0 1 auto;width:100%;text-align:center}.amy-intro-line{font-size:clamp(36px,10.5vw,51px)}}
 .about-section{position:relative;min-height:100vh;display:flex;align-items:center;padding:128px 24px;background:#101010;color:#fff;overflow:hidden}
 .about-bg-number{position:absolute;left:32px;top:50%;transform:translateY(-50%);font:700 clamp(12rem,30vw,30rem)/1 var(--sans);color:rgba(255,255,255,.05);pointer-events:none;user-select:none}
-.about-inner{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(240px,.9fr);grid-template-areas:"intro portrait" "expertise expertise";gap:clamp(40px,6vw,96px);row-gap:clamp(56px,8vw,112px);width:min(100%,1100px);margin:0 auto}
+.about-inner{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(240px,.9fr);grid-template-areas:"intro ." "expertise expertise";gap:clamp(40px,6vw,96px);row-gap:clamp(56px,8vw,112px);width:min(100%,1100px);margin:0 auto}
 .about-intro{grid-area:intro}
-.about-portrait{grid-area:portrait;display:flex;align-items:flex-end;justify-content:center;min-width:0}
-.about-portrait img{display:block;width:100%;max-height:560px;object-fit:contain;object-position:center bottom}
 .about-expertise{grid-area:expertise}
 .about-label{display:block;margin-bottom:32px;font:400 12px/1 "Forum",serif;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,.55)}
 .about-text{font:300 clamp(1.5rem,2.4vw,2.25rem)/1.45 var(--sans);color:#fff}
@@ -115,7 +115,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 .skill-item:hover .skill-num{color:#fff}
 .skill-line{flex:1;height:1px;margin-left:16px;background:rgba(255,255,255,.2);transform:scaleX(0);transform-origin:left;transition:transform .5s ease}
 .skill-item:hover .skill-line{transform:scaleX(1)}
-@media (max-width:900px){.about-inner{grid-template-columns:1fr;grid-template-areas:"intro" "portrait" "expertise"}.about-portrait img{width:min(100%,480px);max-height:440px}.about-bg-number{left:-8px}}
+@media (max-width:900px){.about-inner{grid-template-columns:1fr;grid-template-areas:"intro" "expertise"}.about-bg-number{left:-8px}}
 .experience-section{min-height:75vh;display:flex;align-items:center;padding:clamp(72px,12vw,160px) 24px;background:#fff;color:#111}
 .experience-inner{width:min(100%,1100px);margin:0 auto}
 .experience-label{display:block;margin-bottom:24px;font:400 12px/1 "Forum",serif;letter-spacing:.3em;text-transform:uppercase;color:rgba(17,17,17,.55)}
@@ -147,6 +147,9 @@ a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 <main>
 <section class="amy-intro" aria-label="Intro">
   <div class="amy-intro-sticky">
+    <figure class="amy-intro-portrait">
+      <img src="Img/Yeganeh-hero.jpg" alt="Portrait of Yelena Ghasemi" fetchpriority="high">
+    </figure>
     <div class="amy-intro-text">
       <p class="amy-intro-line amy-intro-line--primary" id="amy-intro-primary">
         <span class="intro-fade intro-fade--lead">Hi there, </span><span class="intro-keep">I'm</span><span class="intro-fade intro-fade--trail"> Yelena.</span>
@@ -164,9 +167,6 @@ a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
       <span class="about-label">About Me</span>
       <p class="about-text">I'm Yelena Ghasemi, a Product &amp; UX Designer focused on crafting thoughtful digital experiences shaped around people. I combine <span class="text-stroke">strategy</span> with <span class="text-stroke">user-first design</span> to turn ideas into clear, meaningful products.</p>
     </div>
-    <figure class="about-portrait">
-      <img src="Img/Yeganehh.png" alt="Portrait of Yelena Ghasemi" loading="lazy">
-    </figure>
     <div class="about-expertise">
       <span class="about-label">Expertise</span>
       <ul class="skills-list">
