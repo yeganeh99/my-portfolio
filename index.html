@@ -85,7 +85,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 .nav-links a:hover::after,.nav-links a:focus-visible::after{transform:scaleX(1);transform-origin:left}
 .nav-links a[aria-current="page"]::after{transform:scaleX(1);transform-origin:left}
 @media (max-width:640px){.site-nav{padding:16px 12px}.nav-links{gap:12px 20px;font-size:12px}}
-.amy-intro{height:260vh;background:#fff;color:#111}
+.amy-intro{height:130vh;background:#fff;color:#111}
 .amy-intro-sticky{position:sticky;top:72px;height:calc(100vh - 72px);display:flex;flex-direction:column;justify-content:center;padding:0 clamp(24px,6vw,80px);box-sizing:border-box}
 .amy-intro-text{max-width:620px}
 .amy-intro-line{margin:0;font:400 clamp(44px,6.4vw,68px)/1.18 "Forum",serif;letter-spacing:-0.01em;color:#1d1d1f}
@@ -115,7 +115,19 @@ a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 .experience-section{min-height:75vh;display:flex;align-items:center;padding:clamp(72px,12vw,160px) 24px;background:#fff;color:#111}
 .experience-inner{width:min(100%,1100px);margin:0 auto}
 .experience-label{display:block;margin-bottom:24px;font:400 12px/1 "Forum",serif;letter-spacing:.3em;text-transform:uppercase;color:rgba(17,17,17,.55)}
-.experience-section h2{font:400 clamp(3rem,8vw,7rem)/1.1 "Forum",serif;letter-spacing:-.02em;color:#111}
+.experience-section h2{margin-bottom:0;font:400 clamp(3rem,8vw,7rem)/1.1 "Forum",serif;letter-spacing:-.02em;color:#111}
+.experience-list{margin-top:64px;border-top:1px solid rgba(17,17,17,.16)}
+.experience-item{display:grid;grid-template-columns:56px minmax(0,1fr);gap:24px;padding:32px 0;border-bottom:1px solid rgba(17,17,17,.16)}
+.experience-logo{width:56px;height:56px;display:block;border:1px solid rgba(17,17,17,.12);background:#fff}
+.experience-logo img{display:block;width:100%;height:100%;object-fit:contain}
+.experience-company h3{margin:0;font:400 1.5rem/1.2 "Forum",serif}
+.experience-company h3 a{color:inherit;text-decoration:none}
+.experience-company h3 a:hover,.experience-company h3 a:focus-visible{text-decoration:underline;text-underline-offset:4px}
+.experience-company p,.experience-role p{margin:6px 0 0;color:rgba(17,17,17,.65);line-height:1.5}
+.experience-roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:24px}
+.experience-role{padding-left:16px;border-left:1px solid rgba(17,17,17,.25)}
+.experience-role h4{margin:0;font:400 1.125rem/1.3 "Forum",serif}
+@media (max-width:640px){.experience-section{min-height:0;padding:88px 20px}.experience-list{margin-top:44px}.experience-item{grid-template-columns:44px minmax(0,1fr);gap:14px;padding:26px 0}.experience-logo{width:44px;height:44px}.experience-company h3{font-size:1.3rem}.experience-roles{grid-template-columns:1fr;gap:16px}}
 </style>
 </head>
 <body>
@@ -165,6 +177,80 @@ a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
   <div class="experience-inner">
     <span class="experience-label">02 / Career</span>
     <h2 id="experiences-title">Experiences</h2>
+    <div class="experience-list">
+      <article class="experience-item">
+        <a class="experience-logo" href="https://www.linkedin.com/school/164771/" target="_blank" rel="noopener noreferrer">
+          <img src="https://media.licdn.com/dms/image/v2/D560BAQEhy54pBgGE9g/company-logo_100_100/company-logo_100_100/0/1681160348853/louisiana_state_university_logo?e=1797465600&amp;v=beta&amp;t=X4xP3Rq92JBb3EABjf5TmdWK87F0EKkl8nJgCgtmigA" alt="Louisiana State University logo" loading="lazy">
+        </a>
+        <div class="experience-details">
+          <div class="experience-company">
+            <h3><a href="https://www.linkedin.com/school/164771/" target="_blank" rel="noopener noreferrer">Louisiana State University</a></h3>
+            <p>Full-time · Baton Rouge, Louisiana, United States · On-site</p>
+          </div>
+          <div class="experience-roles">
+            <div class="experience-role">
+              <h4>Product Designer</h4>
+              <p><time datetime="2026-08">Aug 2026</time> – Present · 4 mos</p>
+            </div>
+            <div class="experience-role">
+              <h4>Graduate Research Assistant</h4>
+              <p><time datetime="2026-08">Aug 2026</time> – Present · 4 mos</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="experience-item">
+        <a class="experience-logo" href="https://www.linkedin.com/company/106259524/" target="_blank" rel="noopener noreferrer">
+          <img src="https://media.licdn.com/dms/image/v2/D4E0BAQH0MTP5h0nfGA/company-logo_100_100/B4EZUgsZQ4GwAQ-/0/1740010264118?e=1797465600&amp;v=beta&amp;t=I01votfuYbWdAbLeGWpz3uyz7kg7uA_IE79OvyyPupY" alt="Bodayga logo" loading="lazy">
+        </a>
+        <div class="experience-details">
+          <div class="experience-company">
+            <h3><a href="https://www.linkedin.com/company/106259524/" target="_blank" rel="noopener noreferrer">Bodayga</a></h3>
+            <p>Full-time · Mississippi, United States · Remote</p>
+          </div>
+          <div class="experience-roles">
+            <div class="experience-role">
+              <h4>Product Manager</h4>
+              <p><time datetime="2024-01">Jan 2024</time> – <time datetime="2026-01">Jan 2026</time> · 2 yrs 1 mo</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="experience-item">
+        <a class="experience-logo" href="https://www.linkedin.com/company/27128141/" target="_blank" rel="noopener noreferrer">
+          <img src="https://media.licdn.com/dms/image/v2/D4D0BAQHKKqvtXbbkAQ/company-logo_100_100/B4DZcQwNWmIAAU-/0/1748332764551/okala_logo?e=1797465600&amp;v=beta&amp;t=c5VVoRwV3liDmgT82TYRaVJiVaFzSttQV6GVJKo0_bs" alt="Okala logo" loading="lazy">
+        </a>
+        <div class="experience-details">
+          <div class="experience-company">
+            <h3><a href="https://www.linkedin.com/company/27128141/" target="_blank" rel="noopener noreferrer">Okala | اُکالا</a></h3>
+            <p>Full-time · Tehran, Tehran Province, Iran · Hybrid</p>
+          </div>
+          <div class="experience-roles">
+            <div class="experience-role">
+              <h4>Product Manager</h4>
+              <p><time datetime="2023-01">Jan 2023</time> – <time datetime="2024-01">Jan 2024</time> · 1 yr 1 mo</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="experience-item">
+        <a class="experience-logo" href="https://www.linkedin.com/company/10613494/" target="_blank" rel="noopener noreferrer">
+          <img src="https://media.licdn.com/dms/image/v2/C560BAQG6J1RUqBSjrQ/company-logo_100_100/company-logo_100_100/0/1660115385740/iran_internet_group_logo?e=1797465600&amp;v=beta&amp;t=lkMUTr1V34xH7mG9CGq6QCTc84jM4iVFWNQ8GKaHiGY" alt="Snapp Group logo" loading="lazy">
+        </a>
+        <div class="experience-details">
+          <div class="experience-company">
+            <h3><a href="https://www.linkedin.com/company/10613494/" target="_blank" rel="noopener noreferrer">Snapp Group</a></h3>
+            <p>Full-time · Tehran, Tehran Province, Iran · On-site</p>
+          </div>
+          <div class="experience-roles">
+            <div class="experience-role">
+              <h4>Product Management Intern</h4>
+              <p><time datetime="2022-10">Oct 2022</time> – <time datetime="2023-01">Jan 2023</time> · 4 mos</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 <script>
