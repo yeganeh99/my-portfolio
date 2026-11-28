@@ -32,7 +32,7 @@ html {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-family: "Courier New", monospace;
+  font-family: "Forum", serif;
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -150,7 +150,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: large;
-    font-family: var(--font-body)
+    font-family: "Forum", serif;
     
 }
 
@@ -172,7 +172,7 @@ main {
 .contact{
 padding: 64px 48px;
 text-align: center;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-family: "Forum", serif;
 margin-top:80px;
 scroll-margin-top: 120px;
 }
@@ -217,7 +217,7 @@ width: 24px;
   
 
 h1, h2, h3 {
-  font-family: var(--font-display); 
+  font-family: "Forum", serif;
   font-weight: 400;}
 
 .work-sample-image {
@@ -251,7 +251,7 @@ h1, h2, h3 {
 
 }
 body {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Forum", serif;
 }
 
 .resume-nav{
@@ -385,7 +385,7 @@ label {
 body {
   background: #3a5462;
   color: #fff;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Forum", serif;
 }
 
 .contact-list,
@@ -485,7 +485,7 @@ body {
 .project-number {
   margin-bottom: auto;
   color: rgba(255, 255, 255, 0.65);
-  font: 400 0.8rem/1 "Courier New", monospace;
+  font: 400 0.8rem/1 "Forum", serif;
 }
 
 .project-card h3 {

@@ -6,15 +6,11 @@
 <title>Yelena Ghasemi — Product &amp; UX Designer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hina+Mincho&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
 <script>
 (function(r){try{if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches&&typeof r.animate==="function"){r.classList.add("px-intro");window.__pxFailsafe=setTimeout(function(){r.classList.remove("px-intro")},4000)}}catch(e){}})(document.documentElement);
 </script>
 <style>
-@font-face{font-family:"PX Mono";font-weight:400;font-display:block;src:url(assets/px-mono-400.woff2) format("woff2")}
-@font-face{font-family:"PX Mono";font-weight:500;font-display:block;src:url(assets/px-mono-500.woff2) format("woff2")}
-@font-face{font-family:"PX Sans";font-weight:400;font-display:block;src:url(assets/px-sans-400.woff2) format("woff2")}
-@font-face{font-family:"PX Sans";font-weight:700;font-display:block;src:url(assets/px-sans-700.woff2) format("woff2")}
 :root{
 --bg:#101010;
 --ink:#ffffff;
@@ -22,14 +18,14 @@
 --vw:100vw; --vh:100vh;
 --sc:max(calc(var(--vw) / 1280), calc(var(--vh) / 800));
 --u:clamp(.72px, min(calc(var(--vw) / 1280), calc(var(--vh) / 800)), 3px);
---mono:"Hina Mincho",serif;
---sans:"Hina Mincho",serif;
+--mono:"Forum",serif;
+--sans:"Forum",serif;
 }
 @supports (height:100dvh){ :root{ --vh:100dvh; } }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 html,body{min-height:100%;background:var(--bg);overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:geometricPrecision}
-body{position:relative;width:100%;min-height:100%;color:var(--ink);font-family:"Hina Mincho",serif}
+body{position:relative;width:100%;min-height:100%;color:var(--ink);font-family:"Forum",serif}
 .stage{position:relative;width:100%;height:var(--vh);min-height:480px;overflow:hidden;background:var(--bg)}
 .scene{position:absolute;left:50%;top:50%;width:calc(1280 * var(--sc));height:calc(800 * var(--sc));transform:translate(-50%,-50%)}
 .scene>video{position:absolute;inset:0;z-index:0;width:100%;height:100%;display:block;object-fit:cover}
@@ -83,7 +79,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 .px-intro .ln>span{translate:0 105%}
 .site-header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(16,16,16,.5);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 .site-nav{display:flex;justify-content:center;align-items:center;padding:24px}
-.nav-links{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 32px;max-width:min(100%,720px);margin:0;padding:0;list-style:none;font:400 14px/1 "Courier New",monospace;text-transform:uppercase;letter-spacing:.08em}
+.nav-links{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 32px;max-width:min(100%,720px);margin:0;padding:0;list-style:none;font:400 14px/1 "Forum",serif;text-transform:uppercase;letter-spacing:.08em}
 .nav-links a{position:relative;color:#fff;text-decoration:none;padding:4px 0}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .4s cubic-bezier(.16,1,.3,1)}
 .nav-links a:hover::after,.nav-links a:focus-visible::after{transform:scaleX(1);transform-origin:left}
@@ -92,22 +88,22 @@ a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 .amy-intro{height:260vh;background:#fff;color:#111}
 .amy-intro-sticky{position:sticky;top:72px;height:calc(100vh - 72px);display:flex;flex-direction:column;justify-content:center;padding:0 clamp(24px,6vw,80px);box-sizing:border-box}
 .amy-intro-text{max-width:620px}
-.amy-intro-line{margin:0;font:400 clamp(40px,6vw,64px)/1.18 "Gloock",serif;letter-spacing:-0.01em;color:#1d1d1f}
+.amy-intro-line{margin:0;font:400 clamp(40px,6vw,64px)/1.18 "Forum",serif;letter-spacing:-0.01em;color:#1d1d1f}
 .amy-intro-line--primary{white-space:nowrap}
 .intro-fade{display:inline-block;overflow:hidden;vertical-align:bottom;white-space:nowrap;max-width:20em;will-change:opacity,max-width}
 .intro-keep{display:inline-block;vertical-align:bottom}
 .amy-intro-line--secondary{margin-top:0;max-height:0;overflow:hidden;opacity:0;pointer-events:none;will-change:transform,opacity,max-height,margin-top}
-.amy-intro-scroll{position:absolute;left:50%;bottom:32px;transform:translateX(-50%);font:500 14px/1 "Hina Mincho",serif;color:rgba(0,97,201,.6);letter-spacing:.02em;transition:opacity .2s linear}
+.amy-intro-scroll{position:absolute;left:50%;bottom:32px;transform:translateX(-50%);font:500 14px/1 "Forum",serif;color:rgba(0,97,201,.6);letter-spacing:.02em;transition:opacity .2s linear}
 @media (max-width:640px){.amy-intro-sticky{top:56px;height:calc(100vh - 56px)}.amy-intro-line{font-size:clamp(34px,10vw,48px)}}
 .about-section{position:relative;min-height:100vh;display:flex;align-items:center;padding:128px 24px;background:#101010;color:#fff;overflow:hidden}
 .about-bg-number{position:absolute;left:32px;top:50%;transform:translateY(-50%);font:700 clamp(12rem,30vw,30rem)/1 var(--sans);color:rgba(255,255,255,.05);pointer-events:none;user-select:none}
 .about-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,96px);width:min(100%,1100px);margin:0 auto}
-.about-label{display:block;margin-bottom:32px;font:400 12px/1 "Courier New",monospace;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.about-label{display:block;margin-bottom:32px;font:400 12px/1 "Forum",serif;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,.55)}
 .about-text{font:300 clamp(1.5rem,2.4vw,2.25rem)/1.45 var(--sans);color:#fff}
 .text-stroke{-webkit-text-stroke:1px #fff;color:transparent;font-weight:700}
 .skills-list{list-style:none;display:flex;flex-direction:column;gap:16px;padding:0;margin:0}
 .skill-item{display:flex;align-items:center;gap:16px;font:400 1.125rem/1.4 var(--sans);cursor:default}
-.skill-num{font:400 12px/1 "Courier New",monospace;color:rgba(255,255,255,.55);transition:color .3s ease}
+.skill-num{font:400 12px/1 "Forum",serif;color:rgba(255,255,255,.55);transition:color .3s ease}
 .skill-name{position:relative;overflow:hidden;display:inline-block}
 .skill-name-inner,.skill-name-clone{display:block;transition:transform .3s ease}
 .skill-name-clone{position:absolute;top:100%;left:0}
@@ -116,6 +112,10 @@ a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 .skill-line{flex:1;height:1px;margin-left:16px;background:rgba(255,255,255,.2);transform:scaleX(0);transform-origin:left;transition:transform .5s ease}
 .skill-item:hover .skill-line{transform:scaleX(1)}
 @media (max-width:900px){.about-inner{grid-template-columns:1fr}.about-bg-number{left:-8px}}
+.experience-section{min-height:75vh;display:flex;align-items:center;padding:clamp(72px,12vw,160px) 24px;background:#fff;color:#111}
+.experience-inner{width:min(100%,1100px);margin:0 auto}
+.experience-label{display:block;margin-bottom:24px;font:400 12px/1 "Forum",serif;letter-spacing:.3em;text-transform:uppercase;color:rgba(17,17,17,.55)}
+.experience-section h2{font:400 clamp(3rem,8vw,7rem)/1.1 "Forum",serif;letter-spacing:-.02em;color:#111}
 </style>
 </head>
 <body>
@@ -159,6 +159,12 @@ a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
         <li class="skill-item"><span class="skill-num">06</span><span class="skill-name"><span class="skill-name-inner">Product Strategy</span><span class="skill-name-clone" aria-hidden="true">Product Strategy</span></span><span class="skill-line" aria-hidden="true"></span></li>
       </ul>
     </div>
+  </div>
+</section>
+<section class="experience-section" aria-labelledby="experiences-title">
+  <div class="experience-inner">
+    <span class="experience-label">02 / Career</span>
+    <h2 id="experiences-title">Experiences</h2>
   </div>
 </section>
 <script>
