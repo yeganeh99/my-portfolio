@@ -24,9 +24,11 @@ html {
 
 .nav-links {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 32px;
+  gap: 16px 32px;
+  max-width: min(100%, 720px);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -59,6 +61,11 @@ html {
 
 .nav-links a:hover::after,
 .nav-links a:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-links a[aria-current="page"]::after {
   transform: scaleX(1);
   transform-origin: left;
 }
@@ -310,8 +317,7 @@ label {
 /* Tablet (≤ 1024px) */
 @media (max-width: 1024px) {
   .nav-links {
-    gap: 24px;
-    padding-top: 32px;
+    gap: 12px 20px;
   }
 
   .home-wrapper {
@@ -335,8 +341,21 @@ label {
   }
 
   .nav-links {
-    gap: 20px;
+    gap: 12px 20px;
     font-size: 0.75rem;
+  }
+
+  .projects-main {
+    width: min(100% - 32px, 1180px);
+    padding-top: 120px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: 240px;
   }
 
   .home-wrapper {
@@ -385,6 +404,66 @@ body {
 
 .work-sample-content,
 .ozon {
+  color: #fff;
+}
+
+.projects-main {
+  width: min(100% - 48px, 1180px);
+  margin: 0 auto;
+  padding: 150px 0 80px;
+}
+
+.projects-heading {
+  margin-bottom: 48px;
+}
+
+.projects-heading p {
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.projects-heading h1 {
+  font-size: clamp(2.5rem, 7vw, 5rem);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  display: flex;
+  min-height: 300px;
+  flex-direction: column;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(16, 16, 16, 0.18);
+}
+
+.project-number {
+  margin-bottom: auto;
+  color: rgba(255, 255, 255, 0.65);
+  font: 400 0.8rem/1 "Courier New", monospace;
+}
+
+.project-card h2 {
+  margin: 48px 0 12px;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+}
+
+.project-card p {
+  line-height: 1.6;
+}
+
+.project-type {
+  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.contact h1 {
+  margin-bottom: 36px;
   color: #fff;
 }
 
